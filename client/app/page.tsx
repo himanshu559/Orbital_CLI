@@ -134,7 +134,7 @@ export default function Home() {
               {/* <h1 className="text-3xl font-bold text-zinc-50 truncate">
                 Welcome, {data?.user?.name || "User"}
               </h1> */}
-              <TextType 
+             <h1 className="text-3xl font-bold text-zinc-50 truncate"> <TextType 
   text={["Welcome",  data?.user?.name || "User"]}
   typingSpeed={75}
   pauseDuration={1500}
@@ -142,7 +142,7 @@ export default function Home() {
   cursorCharacter="|"
   variableSpeed={false}
   onSentenceComplete={() => {}}
-/>
+/></h1>
               <p className="text-sm text-zinc-400">Authenticated user</p>
             </div>
           </div>

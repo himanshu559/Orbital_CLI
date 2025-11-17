@@ -18,6 +18,13 @@ export async function getStoredToken() {
 
 
 export async function storeToken(token) {
+   
+  if (!token || !token.access_token) {
+    console.error(chalk.red("Invalid token object received:"), token);
+    return false;
+  }
+
+
   try {
     // Ensure config directory exists
     await fs.mkdir(CONFIG_DIR, { recursive: true });
