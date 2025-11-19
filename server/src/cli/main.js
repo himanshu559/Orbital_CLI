@@ -6,6 +6,7 @@ import figlet from "figlet";
 
 import {Command} from "commander";
 import { login, logout, whoami } from "./commands/auth/login.js";
+import { wakeUP } from "./commands/ai/wakeUp.js";
 
 dotenv.config();
 
@@ -22,7 +23,7 @@ async function main() {
 
  const program = new Command("orbitals");
 
- program.version("0.0.1").description("Orbital Cli - A Cli based AI Tool").addCommand(login).addCommand(logout).addCommand(whoami);
+ program.version("0.0.1").description("Orbital Cli - A Cli based AI Tool").addCommand(login).addCommand(logout).addCommand(whoami).addCommand(wakeUP);
 
 
  program.action(()=>{

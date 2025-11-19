@@ -2,8 +2,7 @@ import { cancel, confirm, intro, isCancel, outro } from "@clack/prompts";
 import { logger } from "better-auth";
 import { createAuthClient } from "better-auth/client";
 import { deviceAuthorizationClient } from "better-auth/client/plugins";
-
-import chalk, { chalkStderr } from "chalk";
+import chalk from "chalk";
 import { Command } from "commander";
 import fs from "node:fs/promises";
 import open from "open";
@@ -13,9 +12,8 @@ import yoctoSpinner from "yocto-spinner";
 import * as z from "zod/v4";
 import dotenv from "dotenv";
 import prisma from "../../../lib/db.js";
-import { error } from "node:console";
-import { resolve } from "node:path";
 import { clearStoredToken, getStoredToken, isTokenExpired, requireAuth, storeToken } from "../../../lib/token.js";
+
 
 dotenv.config();
 
